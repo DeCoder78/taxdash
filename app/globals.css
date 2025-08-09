@@ -1,0 +1,40 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0b0f18;
+  --panel: #0f1626;
+  --panel-2: #0c1320;
+  --border: #1f2a44;
+  --text: #e6ebff;
+  --muted: #9db0d3;
+  --accent: #7df9ff;
+  --accent-2: #ff47a3;
+  --glow: 0 0 0 transparent;
+}
+body {
+  background:
+    radial-gradient(1200px 400px at 20% -10%, rgba(125,249,255,0.12), transparent 60%),
+    radial-gradient(1000px 300px at 80% -10%, rgba(255,71,163,0.12), transparent 60%),
+    var(--bg);
+  color: var(--text);
+}
+.card { @apply rounded-2xl border; background: var(--panel); border-color: var(--border); }
+.card-ghost { background: var(--panel-2); }
+.h1 { @apply text-3xl font-extrabold tracking-tight; letter-spacing: -0.02em; }
+.h2 { @apply text-xl font-semibold; letter-spacing: -0.01em; }
+.pill { @apply px-3 py-1 rounded-full text-sm font-medium; }
+.subtle { color: var(--muted); }
+.btn {
+  @apply inline-flex items-center gap-2 px-3 py-2 rounded-lg font-medium;
+  background: linear-gradient(180deg, #0f2531, #0b1d27);
+  border: 1px solid #1d3a4a;
+}
+.btn:hover { box-shadow: 0 0 0 2px rgba(125,249,255,.2) inset; }
+.input {
+  @apply border rounded-lg px-3 py-2 bg-transparent;
+  border-color: var(--border);
+}
+.mono { font-variant-numeric: tabular-nums; }
